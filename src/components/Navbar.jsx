@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <>
      
-      <div className="flex justify-between items-center bg-slate-900 px-8 py-5 w-full sticky top-0 z-50 border-b border-slate-800">
+      <div className="flex justify-between items-center bg-slate-900 px-8 py-5 w-full sticky top-0 z-50 border-b border-slate-800 backdrop-blur">
         
         {/* Logo Section */}
         <div className="text-white group cursor-pointer">
