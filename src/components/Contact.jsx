@@ -91,7 +91,7 @@ Message: ${message}
                     Email Me
                   </p>
                   <p className="text-white font-medium">
-                    your.email@example.com
+                    dushmanthakavidu143@gmail.com
                   </p>
                 </div>
               </div>
