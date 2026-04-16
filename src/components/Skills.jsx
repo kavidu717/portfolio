@@ -21,13 +21,13 @@ const skills = [
 ];
 
 export default function TechStack() {
-  // We double the array to create a seamless infinite loop
+
   const duplicatedSkills = [...skills, ...skills];
 
   return (
     <section className="bg-slate-950 py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Match your "About" Header Style */}
+       
         <div className="text-center mb-16">
           <h2 className="text-sm font-mono text-cyan-400 uppercase tracking-[0.3em] mb-2">
             Expertise
@@ -38,7 +38,7 @@ export default function TechStack() {
           <div className="h-1.5 w-20 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        {/* The "Play" Marquee Container */}
+      
         <div className="flex relative">
           <motion.div
             className="flex whitespace-nowrap gap-8"
@@ -65,7 +65,7 @@ export default function TechStack() {
           </motion.div>
         </div>
 
-        {/* Decorative subtle text at the bottom matching your style */}
+       
         <div className="mt-16 text-center">
           <p className="text-slate-500 font-mono text-xs uppercase tracking-widest">
             Hover to explore • Continuous Integration
