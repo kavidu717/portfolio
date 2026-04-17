@@ -19,7 +19,7 @@ export default function Herosection() {
             </h3>
             
             <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight">
-              I'm <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Kavidu Dushamantha</span>
+              I'm <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Kavidu Dushmantha</span>
             </h1>
 
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0">
