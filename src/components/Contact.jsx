@@ -105,7 +105,7 @@ Message: ${message}
                     LinkedIn
                   </p>
                   <p className="text-white font-medium">
-                    linkedin.com/in/yourprofile
+                    https://www.linkedin.com/in/kavidu-dushmantha-468a3631b/
                   </p>
                 </div>
               </div>

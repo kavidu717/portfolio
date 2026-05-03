@@ -45,7 +45,7 @@ export default function Herosection() {
                 <FaGithub />
               </a>
               <a 
-                href="https://linkedin.com/in/yourusername" 
+                href="https://www.linkedin.com/in/kavidu-dushmantha-468a3631b/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white text-3xl hover:text-blue-500 transition-all duration-300 transform hover:-translate-y-1"
