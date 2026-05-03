@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import { motion, AnimatePresence } from "framer-motion";
+import {  AnimatePresence } from "framer-motion";
 
 // Sub-component for individual links
 const NavItem = ({ href, label, onClick }) => (

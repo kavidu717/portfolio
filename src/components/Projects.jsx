@@ -2,6 +2,17 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projectData = [
   {
+     title: "villHUB",
+    description: "A comprehensive platform for the booking and management of villas, offering a seamless experience for both villa owners and customers. Built with React, Node.js, and MongoDB. and also includes real email sending functionality ",
+    liveLink: "https://portfolio-delta-beige-m114unvd32.vercel.app/",
+    repoLink: "https://github.com/kavidu717/portfolio", // Replace with your actual link
+    tech: ["React", "Node.js", "MongoDB"]
+  },
+
+
+  
+
+  {
     title: "LMS Paper Hub",
     description: "A comprehensive platform for downloading academic papers and managing learning materials efficiently. Built with React, Node.js, and MongoDB. and also includes real email sending functionality",
     liveLink: "https://lms-fronend-gamma.vercel.app/",
