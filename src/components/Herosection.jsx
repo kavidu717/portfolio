@@ -31,8 +31,8 @@ export default function Herosection() {
 
        
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8">
-            <a href="/Kavidu-Dushmantha.pdf" 
-            download="Kavidu-Dushmantha.pdf"
+            <a href="/Kavidu Dushmantha.pdf" 
+            download="Kavidu Dushmantha.pdf"
             className="px-10 py-4 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full text-slate-950 font-bold text-lg hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 hover:scale-105">
               Download CV
             </a>
