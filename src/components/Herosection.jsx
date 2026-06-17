@@ -31,9 +31,11 @@ export default function Herosection() {
 
        
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8">
-            <button className="px-10 py-4 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full text-slate-950 font-bold text-lg hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 hover:scale-105">
+            <a href="/Kavidu-Dushmantha.pdf" 
+            download="Kavidu-Dushmantha.pdf"
+            className="px-10 py-4 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full text-slate-950 font-bold text-lg hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 hover:scale-105">
               Download CV
-            </button>
+            </a>
          
             <div className="flex gap-6 items-center">
               <a 
@@ -62,7 +64,7 @@ export default function Herosection() {
               <span className="text-slate-500 text-sm uppercase tracking-wider">Years Learning</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-white text-3xl font-bold">10+</span>
+              <span className="text-white text-3xl font-bold">4+</span>
               <span className="text-slate-500 text-sm uppercase tracking-wider">Projects Built</span>
             </div>
           </div>

@@ -25,7 +25,7 @@ export default function Navbar() {
         <a href="#home" className="text-white group cursor-pointer">
           <code className="text-xl font-bold tracking-tighter text-blue-500">
             <span className="text-blue-500">&lt;</span>
-            dev.portfolio
+            Kavidu Dushmantha
             <span className="text-blue-500"> /&gt;</span>
           </code>
         </a>
