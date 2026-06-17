@@ -2,10 +2,21 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projectData = [
   {
+
+     title: "chronolux",
+     image: "https://res.cloudinary.com/doujmzgn3/image/upload/v1781716751/Screenshot_2026-06-17_224856_v3fk6s.png",
+    description: " A modern and elegant web application for exploring premium watches. Features a sleek user interface for a seamless browsing experience.",
+    liveLink: "https://chrono-lux.store/",
+    repoLink: "https://github.com/kavidu717/chronolux",
+    tech: ["React", "Node.js", "MongoDB","Redux","Tailwind",]
+
+  },
+  {
      title: "villHUB",
+     image: "https://res.cloudinary.com/doujmzgn3/image/upload/v1781716903/Screenshot_2026-06-17_225102_wd80oq.png",
     description: "A comprehensive platform for the booking and management of villas, offering a seamless experience for both villa owners and customers. Built with React, Node.js, and MongoDB. and also includes real email sending functionality ",
     liveLink: "https://villa-hub-front.vercel.app/",
-    repoLink: "https://github.com/kavidu717/villaHub-front", // Replace with your actual link
+    repoLink: "https://github.com/kavidu717/villaHub-front",
     tech: ["React", "Node.js", "MongoDB"]
   },
 
@@ -14,16 +25,18 @@ const projectData = [
 
   {
     title: "LMS Paper Hub",
+    image: "https://res.cloudinary.com/doujmzgn3/image/upload/v1781716816/Screenshot_2026-06-17_224957_dvgevh.png",
     description: "A comprehensive platform for downloading academic papers and managing learning materials efficiently. Built with React, Node.js, and MongoDB. and also includes real email sending functionality",
     liveLink: "https://lms-fronend-gamma.vercel.app/",
-    repoLink: "https://github.com/kavidu717/Paper-Download-System", // Replace with your actual link
+    repoLink: "https://github.com/kavidu717/Paper-Download-System", 
     tech: ["React", "Node.js", "MongoDB"]
   },
   {
     title: "CineSearch App",
+    image: "https://res.cloudinary.com/doujmzgn3/image/upload/v1781716959/Screenshot_2026-06-17_225224_nqibpj.png",
     description: "A film exploration application using the OMDb API, featuring real-time search and detailed movie insights.",
     liveLink: "https://search-film-application.vercel.app/",
-    repoLink: "https://github.com/kavidu717/search-film-application", // Replace with your actual link
+    repoLink: "https://github.com/kavidu717/search-film-application",
     tech: ["React", "Tailwind", "OMDb API"]
   },
   
@@ -34,7 +47,7 @@ export default function Projects() {
     <section className="bg-slate-950 py-24 px-6">
       <div className="max-w-7xl mx-auto">
         
-        
+        {/* Header Section */}
         <div className="text-center mb-16">
           <h2 className="text-sm font-mono text-cyan-400 uppercase tracking-[0.3em] mb-2">
             My Work
@@ -45,14 +58,26 @@ export default function Projects() {
           <div className="h-1.5 w-20 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectData.map((project, index) => (
             <div 
               key={index} 
-              className="group bg-slate-900/50 border border-slate-800 p-8 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 flex flex-col h-full"
+              className="group bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 flex flex-col h-full"
             >
-     
+              
+              {/* Project Image */}
+              <div className="w-full h-60 mb-6 overflow-hidden rounded-xl border border-slate-800/50 relative">
+                {/* Overlay gradient for a cooler look */}
+                <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Title & Description */}
               <h3 className="text-white text-2xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">
                 {project.title}
               </h3>
@@ -61,10 +86,10 @@ export default function Projects() {
                 {project.description}
               </p>
 
-       
+              {/* Tech Stack Tags */}
               <div className="flex flex-wrap gap-2 mb-8">
                 {project.tech.map((t, i) => (
-                  <span key={i} className="text-[10px] font-mono text-cyan-400/80 border border-cyan-400/20 px-2 py-1 rounded">
+                  <span key={i} className="text-[10px] font-mono text-cyan-400/80 border border-cyan-400/20 px-2 py-1 rounded bg-cyan-400/5">
                     {t}
                   </span>
                 ))}
@@ -89,6 +114,7 @@ export default function Projects() {
                   <FaGithub className="text-xl" /> Code
                 </a>
               </div>
+              
             </div>
           ))}
         </div>
