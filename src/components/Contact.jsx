@@ -104,9 +104,9 @@ Message: ${message}
                   <p className="text-xs font-mono text-slate-500 uppercase tracking-widest">
                     LinkedIn
                   </p>
-                  <p className="text-white font-medium">
+                  <a href="https://www.linkedin.com/in/kavidu-dushmantha-468a3631b/" className="text-white font-medium">
                     https://www.linkedin.com/in/kavidu-dushmantha-468a3631b/
-                  </p>
+                  </a>
                 </div>
               </div>
 
