@@ -12,7 +12,7 @@ function App() {
       
       <div className="fixed inset-0 w-full h-screen z-0 pointer-events-none">
         <Scene3D />
-        <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-[1px]"></div>
+        <div className="absolute inset-0 bg-slate-950/20"></div>
       </div>
 
       <div className="relative z-10">
