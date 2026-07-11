@@ -4,32 +4,37 @@ import About from "../src/components/Abot";
 import TechStack from "../src/components/Skills";
 import Projects from "../src/components/Projects";
 import Contact from "../src/components/Contact";
+import Scene3D from "../src/components/Scene3D";
 
 function App() {
   return (
-    <main className="bg-slate-950">
-      <Navbar />
+    <main className="relative bg-slate-950 min-h-screen text-white overflow-hidden">
       
-      {/* 1. Home Section */}
-      <section id="home">
-        <Hero />
-      </section>
+      <div className="fixed inset-0 w-full h-screen z-0 pointer-events-none">
+        <Scene3D />
+        <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-[1px]"></div>
+      </div>
 
-      {/* 2. About Section */}
-      <section id="about">
-        <About />
-        <TechStack /> {/* Tech stack usually lives inside or under About */}
-      </section>
+      <div className="relative z-10">
+        <Navbar />
+        
+        <section id="home">
+          <Hero />
+        </section>
 
-      {/* 3. Projects Section */}
-      <section id="projects">
-        <Projects />
-      </section>
+        <section id="about">
+          <About />
+          <TechStack />
+        </section>
 
-      {/* 4. Contact Section */}
-      <section id="contact">
-        <Contact />
-      </section>
+        <section id="projects">
+          <Projects />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+      </div>
       
     </main>
   );

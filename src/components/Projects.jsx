@@ -44,7 +44,7 @@ const projectData = [
 
 export default function Projects() {
   return (
-    <section className="bg-slate-950 py-24 px-6">
+    <section className="bg-transparent py-24 px-6">
       <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}

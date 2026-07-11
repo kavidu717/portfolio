@@ -2,7 +2,7 @@ import { FaUserGraduate, FaCode, FaRocket } from "react-icons/fa";
 
 export default function About() {
   return (
-    <section className="bg-slate-950 py-24 px-6">
+    <section className="bg-transparent py-24 px-6">
       <div className="max-w-7xl mx-auto">
         
       
