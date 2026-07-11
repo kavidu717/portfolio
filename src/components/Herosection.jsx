@@ -65,11 +65,11 @@ export default function Herosection() {
         <div className="order-1 lg:order-2 flex justify-center items-center relative mt-4 lg:mt-0">
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
-            <div className="relative bg-slate-900/40 backdrop-blur-md p-2 rounded-2xl border border-slate-700/50">
+            <div className="relative bg-slate-900/40 backdrop-blur-md p-2  border border-slate-700/50">
               <img 
                 src="profile pic.jpg" 
                 alt="Kavidu Dushmantha" 
-                className="w-56 h-56 sm:w-72 sm:h-72 md:w-[450px] md:h-[450px] object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
+                className="w-56 h-56 sm:w-72 sm:h-72 md:w-[450px] md:h-[450px] object-cover   hover:grayscale-0 transition-all duration-700 shadow-2xl"
               />
             </div>
             <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-slate-900/80 backdrop-blur-md border border-slate-700 p-3 sm:p-5 rounded-xl shadow-2xl">
