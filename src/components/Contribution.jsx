@@ -3,7 +3,6 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import { useRef } from "react";
 
-// 3D Floating Element (Git Node / Cyber Core)
 function FloatingGitNode() {
   const groupRef = useRef();
   
@@ -18,12 +17,10 @@ function FloatingGitNode() {
   return (
     <group ref={groupRef}>
       <Float speed={2.5} rotationIntensity={1.5} floatIntensity={3}>
-        {/* පිටත තියෙන Wireframe එක (Tech vibe එකට) */}
         <mesh>
           <icosahedronGeometry args={[2, 1]} />
           <meshStandardMaterial color="#06b6d4" wireframe={true} emissive="#06b6d4" emissiveIntensity={0.5} />
         </mesh>
-        {/* ඇතුළත තියෙන දිලිසෙන ගෝලය */}
         <Sphere args={[1.2, 32, 32]}>
           <MeshDistortMaterial color="#1e40af" distort={0.3} speed={2} emissive="#1e3a8a" emissiveIntensity={0.8} />
         </Sphere>
@@ -36,6 +33,7 @@ export default function GithubContributions() {
   return (
     <div className="w-full flex flex-col items-center justify-center py-16 px-4 sm:px-6 relative z-10">
       
+      {/* Title Section */}
       <div className="text-center mb-12">
         <h3 className="text-cyan-400 font-mono text-sm sm:text-lg tracking-[0.2em] uppercase drop-shadow-md mb-2">
           Open Source & Code
@@ -45,59 +43,69 @@ export default function GithubContributions() {
         </h2>
       </div>
       
-      <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+      <div className="w-full max-w-7xl flex flex-col gap-6">
         
-        {/* Left Side: GitHub Stats Widgets */}
-        <div className="col-span-1 lg:col-span-2 flex flex-col sm:flex-row gap-6 justify-center items-center">
-          {/* Main GitHub Stats Card */}
-          <div className="bg-slate-900/50 backdrop-blur-md border border-slate-800/50 p-2 rounded-2xl shadow-[0_0_20px_rgba(6,182,212,0.1)] hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-shadow duration-300 w-full sm:w-1/2">
-                <img 
-                 src="https://github-readme-stats.vercel.app/api?username=kavidu717&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=22d3ee&text_color=cbd5e1&icon_color=06b6d4" 
-                 alt="GitHub Stats" 
-                 className="w-full h-auto object-contain"
-                onError={(e) => e.target.style.display = 'none'} 
-/>
-          </div>
-
+        {/* Top Row: Languages (1 Col) + Profile Details Graph (2 Cols) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          
           {/* Top Languages Card */}
-          <div className="bg-slate-900/50 backdrop-blur-md border border-slate-800/50 p-2 rounded-2xl shadow-[0_0_20px_rgba(6,182,212,0.1)] hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-shadow duration-300 w-full sm:w-1/2">
+          <div className="col-span-1 bg-slate-900/40 backdrop-blur-md border border-slate-700/50 p-4  shadow-xl hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] hover:border-cyan-500/30 transition-all duration-300 flex items-center justify-center group">
             <img 
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=kavidu717&theme=tokyonight&hide_border=true&layout=compact&bg_color=00000000&title_color=22d3ee&text_color=cbd5e1" 
-              alt="Top Languages" 
-              className="w-full h-auto object-contain"
-               onError={(e) => e.target.style.display = 'none'} 
+              src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kavidu717&theme=tokyonight" 
+              alt="GitHub Repos Per Language" 
+              className="w-full h-auto max-w-[320px] object-contain  group-hover:scale-105 transition-transform duration-500"
+              onError={(e) => e.target.style.display = 'none'} 
             />
           </div>
-        </div>
 
-        {/* Right Side: 3D Floating Element */}
-        <div className="col-span-1 h-64 lg:h-auto bg-slate-900/30 backdrop-blur-sm border border-slate-800/30 rounded-3xl relative overflow-hidden flex items-center justify-center shadow-[0_0_20px_rgba(37,99,235,0.1)]">
-          <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[2, 2, 5]} intensity={1} color="#06b6d4" />
-            <FloatingGitNode />
-          </Canvas>
-          <div className="absolute bottom-4 text-center w-full pointer-events-none">
-             <p className="text-slate-400 font-mono text-xs tracking-widest uppercase">Git Node Active</p>
+          {/* Profile Details Graph Card */}
+          <div className="col-span-1 lg:col-span-2 bg-slate-900/40 backdrop-blur-md border border-slate-700/50 p-4  shadow-xl hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] hover:border-cyan-500/30 transition-all duration-300 flex items-center justify-center group">
+            <img 
+              src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kavidu717&theme=tokyonight" 
+              alt="GitHub Profile Details" 
+              className="w-full h-auto max-w-[650px] object-contain rounded-xl group-hover:scale-105 transition-transform duration-500"
+              onError={(e) => e.target.style.display = 'none'} 
+            />
           </div>
+
         </div>
 
-      </div>
+        {/* Bottom Row: Calendar (2 Cols) + 3D Node (1 Col) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          
+          {/* GitHub Calendar */}
+          <div className="col-span-1 lg:col-span-2 p-6 sm:p-8 bg-slate-900/40 backdrop-blur-md border border-slate-700/50  shadow-xl hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] hover:border-cyan-500/30 transition-all duration-300 flex flex-col justify-center overflow-x-auto custom-scrollbar">
+            <div className="min-w-[750px] flex justify-center">
+              <GitHubCalendar 
+                username="kavidu717" 
+                colorScheme="dark"
+                blockSize={14}
+                blockMargin={5}
+                fontSize={14}
+                theme={{
+                  dark: ['#0f172a', '#0891b2', '#06b6d4', '#22d3ee', '#67e8f9']
+                }}
+              />
+            </div>
+          </div>
 
-      {/* Bottom: Contribution Calendar */}
-      <div className="w-full max-w-6xl p-6 sm:p-8 bg-slate-900/50 backdrop-blur-md border border-slate-800/50 shadow-[0_0_30px_rgba(6,182,212,0.1)] flex justify-center overflow-x-auto custom-scrollbar">
-        <div className="min-w-[800px]">
-          <GitHubCalendar 
-            username="kavidu717" 
-            colorScheme="dark"
-            blockSize={14}
-            blockMargin={5}
-            fontSize={14}
-            theme={{
-              dark: ['#0f172a', '#0891b2', '#06b6d4', '#22d3ee', '#67e8f9']
-            }}
-          />
+          {/* 3D Floating Element */}
+          <div className="col-span-1 h-[300px] lg:h-auto bg-slate-900/40 backdrop-blur-md border border-slate-700/50  relative overflow-hidden flex items-center justify-center shadow-xl hover:shadow-[0_0_30px_rgba(37,99,235,0.15)] hover:border-blue-500/30 transition-all duration-300">
+            <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+              <ambientLight intensity={0.5} />
+              <directionalLight position={[2, 2, 5]} intensity={1} color="#06b6d4" />
+              <FloatingGitNode />
+            </Canvas>
+            
+            {/* Beautiful Glowing Badge inside the 3D container */}
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-slate-950/80 border border-cyan-500/30 px-4 py-1.5 rounded-full backdrop-blur-md">
+              <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_#22d3ee]"></div>
+              <span className="text-cyan-400 font-mono text-[10px] tracking-widest uppercase">Git Node Active</span>
+            </div>
+          </div>
+
         </div>
+
       </div>
 
     </div>
