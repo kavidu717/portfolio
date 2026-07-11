@@ -7,6 +7,8 @@ import Projects from "../src/components/Projects";
 import Contact from "../src/components/Contact";
 import Scene3D from "../src/components/Scene3D";
 import Loader from "../src/components/Loader";
+import Contribution from "../src/components/Contribution";
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,6 +51,10 @@ function App() {
 
         <section id="contact">
           <Contact />
+        </section>
+
+        <section id="contributions">
+          <Contribution />
         </section>
       </div>
       

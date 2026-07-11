@@ -45,7 +45,7 @@ export default function Loader() {
   const [visibleLines, setVisibleLines] = useState([]);
 
   useEffect(() => {
-    const totalDuration = 5000;
+    const totalDuration = 4000;
     const progressInterval = 38;
     const lineInterval = totalDuration / codeLogs.length;
 
